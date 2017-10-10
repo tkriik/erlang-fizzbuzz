@@ -21,7 +21,9 @@ wait(N) ->
     end.
 
 fizzbuzz(Parent, N) ->
-    if N rem 3 == 0 ->
+    if N rem 15 == 0 ->
+           io:format("~p fizzbuzz~n", [N]);
+       N rem 3 == 0 ->
            io:format("~p fizz~n", [N]);
        N rem 5 == 0 ->
            io:format("~p buzz~n", [N]);

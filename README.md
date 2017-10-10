@@ -27,4 +27,9 @@ Run fizzbuzz computation from 1 up to any positive integer N:
 8
 9 fizz
 10 buzz
+11
+12 fizz
+13
+14
+15 fizzbuzz
 ```
