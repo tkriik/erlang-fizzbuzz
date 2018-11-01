@@ -1,7 +1,16 @@
 -module(fizzbuzz).
 
--export([up_to/1,
+-export([to/1,
+         up_to/1,
          fizzbuzz/2]).
+
+to(N) ->
+    Self = self(),
+    Numbers = if N < 0 -> lists:seq(-1, N, -1); true -> lists:seq(1, N) end,
+    lists:foreach(fun(M) ->
+                          spawn_link(?MODULE, fizzbuzz, [Self, M])
+                  end, Numbers),
+    wait(abs(N)).
 
 up_to(N) ->
     Self = self(),
