@@ -1,4 +1,5 @@
 -module(fizzbuzz).
+-deprecated({up_to, 1}).
 
 -export([to/1,
          up_to/1,
