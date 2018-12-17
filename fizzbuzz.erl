@@ -13,7 +13,6 @@ to(N) ->
                   end, Numbers),
     wait(abs(N)).
 
-%% @deprecated Please use {@link fizzbuzz:to/1} instead.
 up_to(N) ->
     Self = self(),
     lists:foreach(fun(M) ->
